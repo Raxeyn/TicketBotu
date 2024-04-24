@@ -40,4 +40,4 @@ events.forEach((event) => {
   }
 });
 
-client.login(config.bot.token);
+client.login(process.env.TOKEN);
