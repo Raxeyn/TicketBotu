@@ -21,7 +21,7 @@ const client = new Client({
 });
 
 const config = require('./settings/config');
-client.login(config.token);
+client.login(process.env.TOKEN);
 
 module.exports = client;
 
