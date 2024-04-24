@@ -1,21 +1,33 @@
-# Discord Tickets Bot
+# Ticket Bot
 
-A cool Discord bot to manage tickets on your server 🎫
+Ticket Bot is a discord ticket bot with buttons / select menu made with Discord.js v14
 
-*Project under construction... follow the progress on the [Discord](https://discord.gg/11pm) server.*
+## How to install ?
 
-*If you don't have any development knowledge, it is recommended to join the Discord support server to get help.*
+You need to have Node.JS 18+
+``````bash
+git clone https://github.com/ZqxDev/Ticket-Bot-V14.git
+cd Ticket-Bot-V14
+npm i
+``````
 
-### 💬 A nice and easy to use system
+## How to config ?
 
-This is a small project that has been designed to be usable by everyone. That's why it doesn't use any database.
+```js
+//./settings/config
 
-Why search complicated when you can just click a button ?
+module.exports = {
+    token: "TOKEN_BOT",
+    ticket_channel: "CHANNEL_ID",
+    ticket_category: "CATEGORY_ID",
+    ticket_logs: "CHANNEL_ID",
+    support_team: "ROLE_ID"
+}
+```
 
-![Setup](./img/setup.gif)
+## How to start ?
+```bash
+node index.js # To start the ticket-bot
+```
 
-Responding to a ticket is easy !
-
-No need to search for hours, use also the buttons.
-
-Realized with ❤️ by [NOobSsam](https://github.com/NOobSsam).
+## Many thanks to the people who will put a ⭐!
