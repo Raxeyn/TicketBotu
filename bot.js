@@ -1,10 +1,10 @@
 const { Client, Intents, Collection } = require('discord.js');
 const { loadCommands, loadEvents, loadButtons } = require('./utils/loader')
 const bot = new Client ({intents: Object.keys(Intents.FLAGS)});
-require('moment').locale('FR');
+require('moment').locale('TR');
 ['commands', 'cooldowns', 'button'].forEach(x => bot[x] = new Collection());
 
-bot.config = require('./config/config')
+bot.config = require('./config/config.js')
 bot.util = require('./utils/util')
 bot.logs = (embed) => {
     if(bot.config.logs.enabled) {
@@ -23,4 +23,4 @@ bot.logs = (embed) => {
 
 loadCommands(bot), loadEvents(bot), loadButtons(bot);
 
-bot.login(require('./config/config').TOKEN)
+bot.login(process.env.TOKEN)
