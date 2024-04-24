@@ -1,0 +1,24 @@
+chore:
+  - 'README.md'
+  - '.gitignore'
+  - 'package.json'
+  - 'LICENSE'
+
+ci:
+  - '.github/*'
+  - '.github/workflows/*'
+
+Ticket Changes:
+  - 'commands/ticket/*'
+
+Info Changes:
+  - 'commands/info/*'
+
+General Changes:
+  - 'commands/general/*'
+
+Events:
+  - 'events/*'
+
+handlers:
+  - 'handlers/*'

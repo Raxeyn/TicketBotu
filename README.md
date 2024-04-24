@@ -1,47 +1,42 @@
-<p align="center">
-  <a href="" rel="noopener"><img width=200px height=200px src="https://night-api.com/images/logo/logo.png" alt="Bot logo"></a>
-</p>
-
-<h3 align="center">Ticket Bot V2</h3>
-
-<div align="center">
+# 📃 Ticket Bot
 
 
-</div>
+## ticket discord bot [Features](#-features).
+---
+## Need help? join discord server [Invite Link](https://discord.gg/hHweGgGqXa)
 
 ---
+### Note: Node.js 16.6.0 or newer is required.
+---
 
-<p align="center"> 🤖 Quelques lignes décrivant ce que fait notre robot.
-    <br> 
-</p>
+## Installation
 
-## 📝 Table des matières
+```sh
+npm install
+```
+---
 
-- [À propos de](#about)
-- [Construit en utilisant](#built_using)
-- [Auteurs](#authors)
+### You need to rename example.env file to `.env` and fill the info.
+### Slash commands not showing in your server? fill `.env` info, and run `slash.js` file.
 
-## 🧐 À propos de <a name = "about"></a>
+- .env
+```sh
+TOKEN=
+BOTID=
+SERVERID=
+HOST=
+USER=
+DATABASE=
+PORT=3306
+OWNERS=["596227913209217024"]
+```
 
-Bot de gestion de tickets 100% configurable.<br> 
-❌ - Non multi-serveur.<br> 
-✅ - Logs de tickets.<br> 
-✅ - Transcription de tickets.<br> 
-✅ - Gestion de tickets.<br> 
-
-Pour en savoir plus sur le bot, voir la [page d'accueil](../README.md).<br> 
-Pour tout problème, vous pouvez me contacter sur le [Github](https://github.com/MaxLeLoup/Ticket-Bot-V2/issues).<br> 
-En cas de question, vous pouvez me contacter sur le Discord [Night Group](https://discord.gg/ySbecQPWce).
-
-
-## ⛏️ Construit en utilisant <a name = "built_using"></a>
-
-- [NodeJS](https://nodejs.org/en/) - Déboggueur de code en JavaScript
-- [Discord.js](https://discord.js.org/) - API de Discord
-- [Moment](https://momentjs.com/) - API de date et heure
-- [Discord Html Transcripts](https://www.npmjs.com/package/discord-html-transcripts) - Module de transcription de Discord en HTML par [@ItzDerock](https://github.com/ItzDerock)
-
-## ✍️ Auteurs  <a name = "authors"></a>
-
-- [@Night Group](https://github.com/Night-API) - Propriétaire du projet
-- [@MaxLeLoup](https://github.com/MaxLeLoup) - Idée et Travail Initial
+### 🥳 Features:
+- Send message to ticket after user left the server.
+- Send message and add user to the ticket after user rejoined the server.
+- Ability to set staff, managers role for ticket channel and changed the embed text, and alot more ...
+- Ability to add / remove user to the ticket with `/add`, `/remove` commands.
+- Ability to close / open ticket with `/close`, `/open` commands.
+- Ability to show all ticket list, and filtered them by `user tickets`, `opened tickets`, `closed tickets`.
+- Ability to rename the ticket with `/rename` command.
+- Ability to use variables in ticket content, use `/variables` to show all available variables.
