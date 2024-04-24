@@ -4,7 +4,7 @@ const {
   Collection,
   Intents
 } = require('discord.js');
-const config = require('./config.json');
+const config = require('./config.js');
 const {
   REST
 } = require('@discordjs/rest');
@@ -13,7 +13,7 @@ const {
 } = require('discord-api-types/v9');
 const {
   clientId
-} = require('./config.json');
+} = require('./config.js');
 const t = require('./token.json');
 
 const slashcommands = [];
@@ -75,4 +75,4 @@ client.on('interactionCreate', async interaction => {
   };
 });
 
-client.login(process.env.token);
+client.login(process.env.TOKEN);
