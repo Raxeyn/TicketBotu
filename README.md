@@ -1,89 +1,47 @@
 <p align="center">
-  <a href="https://github.com/elbkr/ticket-bot">
-    <img src="readme/ticket-bot.png" alt="ticket-bot" width="500"/>
-  </a>
+  <a href="" rel="noopener"><img width=200px height=200px src="https://night-api.com/images/logo/logo.png" alt="Bot logo"></a>
 </p>
 
- <p align ="center">
-   <a href="https://www.jetbrains.com/community/opensource/#support">
-    <img src="readme/jb_beam.png" alt="jetbrains" width="25"/>
-  </a>  Thanks to <a href="https://www.jetbrains.com/community/opensource/#support">JetBrains</a> for providing me free license for developing this project!
-  </p>
-  
-##### Special Thanks To [444x](https://github.com/unf6) For Updating To V14
+<h3 align="center">Ticket Bot V2</h3>
 
-## Features
-- Multi guild!
-- Open tickets by pressing a button
-- Add and remove bot moderators
-- Manage tickets by buttons or slash commands
-- Manage ticket categories
-- Send tickets history
-- Log ticket actions
-- Much more!
+<div align="center">
 
-<img src="readme/splash.png" width="3000" alt="splash">
 
-## Contributing
-- Want to contribute? Feel free to make any changes you want
-1. Fork or clone the repo
-2. Make any changes you want (You can also see `todo` file)
-3. Open a pull request explaining what changes you've made
-4. I ([el bkr](https://github.com/elbkr)) will review it and accept it :D
+</div>
 
-## Installation
+---
 
-### Requirements
-- Node v18 or higher
+<p align="center"> 🤖 Quelques lignes décrivant ce que fait notre robot.
+    <br> 
+</p>
 
-### Getting the files
-1. GitHub CLI: `git clone https://github.com/elbkr/ticket-bot`
-2. Download and extract the zip
-3. Open with GitHub Desktop
+## 📝 Table des matières
 
-### Creating the application
-1. Create an application in [Discord Developer Portal](https://discord.com/developers/applications)
-2. Create a BOT and Copy the BOT token
-3. Enable all privileged gateway intents
-4. Go to OAuth2 and copy the client ID
-5. Paste the token at `TOKEN` line and the client ID  at `CLIENT_ID` line in `.env` file
-6. Change `REPLACE_THIS` in the URL below with the client ID, and enter the link in your browser
+- [À propos de](#about)
+- [Construit en utilisant](#built_using)
+- [Auteurs](#authors)
 
-https://discord.com/api/oauth2/authorize?client_id=REPLACE_THIS&permissions=8&scope=applications.commands%20bot
+## 🧐 À propos de <a name = "about"></a>
 
-### Connecting to mongo DB
-1. Login or register into [Mongo DB](https://account.mongodb.com/account/login)
-2. Create a cluster and complete the configuration
-3. Get the connection url by pressing on `connect < connect your application`
-4. Replace the `password` with your database access password
-5. Paste the URL into `.env` file  at `MONGO` line
+Bot de gestion de tickets 100% configurable.<br> 
+❌ - Non multi-serveur.<br> 
+✅ - Logs de tickets.<br> 
+✅ - Transcription de tickets.<br> 
+✅ - Gestion de tickets.<br> 
 
-*The URL looks like this:* `mongodb+srv://username:password@clusterName.pjxpv.mongodb.net/MyFirstDatabase?retryWrites=true&w=majority`
+Pour en savoir plus sur le bot, voir la [page d'accueil](../README.md).<br> 
+Pour tout problème, vous pouvez me contacter sur le [Github](https://github.com/MaxLeLoup/Ticket-Bot-V2/issues).<br> 
+En cas de question, vous pouvez me contacter sur le Discord [Night Group](https://discord.gg/ySbecQPWce).
 
-### Changing ticket topics
-1. Go to `src/events/interactions/buttonPress.js` file
-2. Slide down to the line **127**
-3. Change the objects (*See the example below*)
-4. Don't forget to also change the topics in `src/commands/tickets/open.js` file
 
-Object example:
-```js
-{
-label: "This will show in the dropdown menu",
-value: "value",
-emoji: "<:emoji:emoji_id>" // or a simple emoji 🔇
-}
-```
-- For more info on how to get custom emojis ID, check [this guide](https://www.youtube.com/watch?v=srUHwXnw1Jst) I found ;)
+## ⛏️ Construit en utilisant <a name = "built_using"></a>
 
-### .ENV Output
-After the configuration, the `.env` file should look like this:
-```env
-TOKEN=SuPerReALToken.BelIeVe_Me_itS_ReaL
-MONGO=mongodb+srv://username:password@clusterName.pjxpv.mongodb.net/MyFirstDatabase?retryWrites=true&w=majority
-CLIENT_ID=521311050193436682
-```
+- [NodeJS](https://nodejs.org/en/) - Déboggueur de code en JavaScript
+- [Discord.js](https://discord.js.org/) - API de Discord
+- [Moment](https://momentjs.com/) - API de date et heure
+- [Discord Html Transcripts](https://www.npmjs.com/package/discord-html-transcripts) - Module de transcription de Discord en HTML par [@ItzDerock](https://github.com/ItzDerock)
 
-### Running the BOT
-1. Open a terminal and run `npm install` or `npm i`
-2. Run `node .`
+## ✍️ Auteurs  <a name = "authors"></a>
+
+- [@Night Group](https://github.com/Night-API) - Propriétaire du projet
+- [@MaxLeLoup](https://github.com/MaxLeLoup) - Idée et Travail Initial
