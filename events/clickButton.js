@@ -22,7 +22,7 @@ client.on("interactionCreate", async interaction => {
       .setColor("#4453F5")
       .setDescription("Support will be with you shortly.\nTo close this ticket click on button 🔒")
       .setFooter({
-        text:"ThailandCodes © / Th | N A S S E R ♕︎", 
+        text:"NovaProject | Ticket", 
         iconURL:client.user.displayAvatarURL()
                  })
 
@@ -96,7 +96,7 @@ client.on("interactionCreate", async interaction => {
         })
           .setThumbnail(interaction.guild.iconURL({dynamic:true}))
           .setFooter({
-          text:"ThailandCodes © / Th | N A S S E R",
+          text:"NovaProject | Ticket",
           iconURL: interaction.guild.iconURL({dynamic:true})
           })
         

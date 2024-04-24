@@ -4,7 +4,7 @@ client.on("ready", () => {
   client.user.setPresence({
     status: 'idle',
     activities: [{ 
-      name: '/help',
+      name: 'discord.gg/novaproject',
       type:"WATCHING",
     }],
      });

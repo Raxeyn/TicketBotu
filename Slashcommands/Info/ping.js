@@ -5,7 +5,7 @@ module.exports = {
   run : async(interaction, client, args) => {
     await interaction.deferReply()
     let Latency = Date.now() - interaction.createdTimestamp
-    interaction.editReply({content:"> <a:loading:958875394822529094> Loading..."}).then(() => 
+    interaction.editReply({content:"> <a:yklenme:825679011920216084> Loading..."}).then(() => 
       setTimeout(() => {
         interaction.editReply({content:`>>> ⌛ | Latency : ${Latency}ms\n⏱️ | Api Latency : ${client.ws.ping}ms`})
       },2 * 1000)

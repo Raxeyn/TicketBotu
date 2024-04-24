@@ -58,70 +58,70 @@ module.exports = {
     let choice = interaction.options.getString("command")
 
     if (choice === "Ping") {
-      await interaction.editReply({content:"> <a:loading:958875394822529094> Loading..."}).then(() => 
+      await interaction.editReply({content:"> <a:yklenme:825679011920216084> Loading..."}).then(() => 
       setTimeout(() => {
         interaction.editReply({content:`> 🏓 This Command Returns The Ping of The Bot\n> \`/ping\``})
       },2 * 1000)
       )
     }
     if (choice === "Add") {
-      interaction.editReply({content:"> <a:loading:958875394822529094> Loading..."}).then(() => 
+      interaction.editReply({content:"> <a:yklenme:825679011920216084> Loading..."}).then(() => 
       setTimeout(() => {
         interaction.editReply({content:`> ➕ This Command Helps You to Add Someone To The Ticket\n> \`/add\``})
       },2 * 1000)
       )
     }
     if (choice === "Remove") {
-      interaction.editReply({content:"> <a:loading:958875394822529094> Loading..."}).then(() => 
+      interaction.editReply({content:"> <a:yklenme:825679011920216084> Loading..."}).then(() => 
       setTimeout(() => {
         interaction.editReply({content:`> ➖ This Command Helps You to Remove Someone From The Ticket\n> \`/remove\``})
       },2 * 1000)
       )
     }
     if (choice === "Close") {
-      interaction.editReply({content:"> <a:loading:958875394822529094> Loading..."}).then(() => 
+      interaction.editReply({content:"> <a:yklenme:825679011920216084> Loading..."}).then(() => 
       setTimeout(() => {
         interaction.editReply({content:`> 🔒 This Command Helps You To Close The Ticket\n> \`/close\``})
       },2 * 1000)
       )
     }
     if (choice === "Delete") {
-      interaction.editReply({content:"> <a:loading:958875394822529094> Loading..."}).then(() => 
+      interaction.editReply({content:"> <a:yklenme:825679011920216084> Loading..."}).then(() => 
       setTimeout(() => {
         interaction.editReply({content:`> ⛔ This Command Helps You To Delete The Ticket\n> \`/delete\``})
       },2 * 1000)
       )
     }
     if (choice === "Rename") {
-      interaction.editReply({content:"> <a:loading:958875394822529094> Loading..."}).then(() => 
+      interaction.editReply({content:"> <a:yklenme:825679011920216084> Loading..."}).then(() => 
       setTimeout(() => {
         interaction.editReply({content:`> ✍️ This Command Helps You To Rename The name of the Ticket\n> \`/rename\``})
       },2 * 1000)
       )
     }
     if (choice === "ST") {
-      interaction.editReply({content:"> <a:loading:958875394822529094> Loading..."}).then(() => 
+      interaction.editReply({content:"> <a:yklenme:825679011920216084> Loading..."}).then(() => 
       setTimeout(() => {
         interaction.editReply({content:`> ⚙️ This Command Helps You To Setup The Tickets\n> \`/setup_tickets\``})
       },2 * 1000)
       )
     }
     if (choice === "SP") {
-      interaction.editReply({content:"> <a:loading:958875394822529094> Loading..."}).then(() => 
+      interaction.editReply({content:"> <a:yklenme:825679011920216084> Loading..."}).then(() => 
       setTimeout(() => {
         interaction.editReply({content:`> ⚙️ This Command Helps You To Send Panel To Open Tickets\n> \`/send_panel\``})
       },2 * 1000)
       )
     }
     if (choice === "bla") {
-      interaction.editReply({content:"> <a:loading:958875394822529094> Loading..."}).then(() => 
+      interaction.editReply({content:"> <a:yklenme:825679011920216084> Loading..."}).then(() => 
       setTimeout(() => {
         interaction.editReply({content:`> ⚫ This Command Helps You To Ban Someone from Open Tickets\n> \`/blacklist_add\``})
       },2 * 1000)
       )
     }
     if (choice === "blr") {
-      interaction.editReply({content:"> <a:loading:958875394822529094> Loading..."}).then(() => 
+      interaction.editReply({content:"> <a:yklenme:825679011920216084> Loading..."}).then(() => 
       setTimeout(() => {
         interaction.editReply({content:`> ⚫ This Command Helps You To Remove Somone from Blacklist\n> \`/blacklist_remove\``})
       },2 * 1000)
@@ -135,12 +135,12 @@ module.exports = {
                  })
       .setThumbnail(interaction.guild.iconURL({dynamic:true}))
         .setFooter({
-          text:"ThailandCodes © / Th | N A S S E R",
+          text:"NovaProject | Ticket Help",
           iconURL: interaction.guild.iconURL({dynamic:true})
         })
       .setColor("#4453F5")
 
-      interaction.editReply({embeds:[new MessageEmbed().setDescription("<a:loading:958875394822529094> Loading...").setColor("#4453F5")]}).then(() => 
+      interaction.editReply({embeds:[new MessageEmbed().setDescription("<a:yklenme:825679011920216084> Loading...").setColor("#4453F5")]}).then(() => 
       setTimeout(() => {
         interaction.editReply({embeds:[embed]})
       }, 2*1000))

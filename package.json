@@ -1,7 +1,7 @@
 {
   "name": "ticket-v13",
   "version": "1.0.0",
-  "description": "Ticket bot by N A S S E R ♕︎",
+  "description": "Ticket bot by R A X E Y N ♕︎",
   "main": "index.js",
   "dependencies": {
     "discord.js": "^13.6.0",
@@ -9,12 +9,15 @@
     "pro.db": "^3.0.6",
     "util": "^0.12.4",
     "express": "^4.17.3",
-    "discord-html-transcripts": "^2.2.8"
+    "discord-html-transcripts": "^2.2.8",
+    "@discordjs/voice": "^0.16.1"
+  },
+  "engines": {
+    "node": "16.x"
   },
   "scripts": {
-    "start":"node index.js"
+    "start": "node index.js"
   },
-  "author": "N A S S E R ♕︎",
-  "license": "ISC"
-},
-"engines": { "node": "16.x" }
+  "author": "R A X E Y N ♕︎",
+  "license": "MIT"
+}

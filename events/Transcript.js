@@ -33,7 +33,7 @@ client.on("interactionCreate", async interaction => {
                  })
       .setThumbnail(interaction.guild.iconURL({dynamic:true}))
         .setFooter({
-          text:"ThailandCodes © / Th | N A S S E R",
+          text:"NovaProject | Transcript",
           iconURL: interaction.guild.iconURL({dynamic:true})
         })
         .setColor("#4453F5")

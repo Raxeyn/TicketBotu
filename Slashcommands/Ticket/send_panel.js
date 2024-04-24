@@ -52,7 +52,7 @@ module.exports = {
 
       if (!color) color = "#4453F5";
 
-      if (!footer) footer = "ThailandCodes © / Th | N A S S E R ♕︎";
+      if (!footer) footer = "NovaProject | Ticket";
 
       if (!image) image = "https://images-ext-2.discordapp.net/external/38nfU6EsDbOc5nrEOByU1SMyy6kzVnMCcXaqsxABO2Q/%3Fsize%3D4096/https/cdn.discordapp.com/banners/781805600727105567/1e4f634085746b140f950651d2934358.webp";
 

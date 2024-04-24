@@ -32,7 +32,7 @@ client.on("interactionCreate", async interaction => {
                  })
       .setThumbnail(interaction.guild.iconURL({dynamic:true}))
         .setFooter({
-          text:"ThailandCodes © / Th | N A S S E R",
+          text:"NovaProject | Deleted",
           iconURL: interaction.guild.iconURL({dynamic:true})
           
         })

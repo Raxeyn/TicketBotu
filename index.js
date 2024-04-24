@@ -21,4 +21,13 @@ require("./handler")(client);
 module.exports = client;
 
 client.slashCommands = new Collection();
-client.login(process.env.token)
+client.login(process.env.TOKEN)
+
+const { joinVoiceChannel } = require('@discordjs/voice');
+ client.on('ready', () => { 
+  joinVoiceChannel({
+channelId: "1228395713235517560",
+guildId: "1228395713227001916",       
+adapterCreator: client.guilds.cache.get("1228395713227001916").voiceAdapterCreator
+    });
+});
