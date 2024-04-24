@@ -1,42 +1,43 @@
-const { Client, Collection, GatewayIntentBits, Partials, ActivityType } = require("discord.js");
-const colors = require("colors");
+const ora = require("ora");
+const config = require("./config");
+const fs = require("fs");
 
-const client = new Client({
-    intents: [ GatewayIntentBits.Guilds, GatewayIntentBits.GuildModeration, GatewayIntentBits.GuildEmojisAndStickers, GatewayIntentBits.GuildIntegrations, GatewayIntentBits.GuildWebhooks, GatewayIntentBits.GuildInvites, GatewayIntentBits.GuildVoiceStates, GatewayIntentBits.GuildMessageReactions, GatewayIntentBits.GuildMessageTyping, GatewayIntentBits.DirectMessages, GatewayIntentBits.DirectMessageReactions, GatewayIntentBits.DirectMessageTyping, GatewayIntentBits.GuildScheduledEvents, GatewayIntentBits.GuildPresences, GatewayIntentBits.GuildMembers, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent ],
-    partials: [ Partials.Channel, Partials.GuildMember, Partials.GuildScheduledEvent, Partials.Message, Partials.Reaction, Partials.ThreadMember, Partials.User ],
-    restTimeOffset: 0,
-    failIfNotExists: false,
-    presence: {
-        activities: [{
-            name: `Chose your status`,
-            type: ActivityType.Streaming,
-            url: "https://www.twitch.tv/zqx"
-        }],
-        status: "online"
-    },
-    allowedMentions: {
-        parse: ["roles", "users", "everyone"],
-        repliedUser: false
-    }
+const { Client, Collection } = require("discord.js");
+
+const intentsLoader = ora("Registering Intents").start();
+
+// Checks
+let finalIntents = [];
+if (!Array.isArray(config.bot.intents)) {
+  intentsLoader.warn(
+    "Intents in config file must be in an array, default intents will be used"
+  );
+} else {
+  finalIntents = config.bot.intents;
+  intentsLoader.succeed("Loaded intents successfully from the config file");
+}
+
+const client = new Client({ intents: finalIntents });
+
+module.exports.client = client;
+module.exports.config = config;
+module.exports.db = require("./src/util/functions.js");
+
+// exports
+client.menus = new Collection();
+client.buttons = new Collection();
+
+const events = fs
+  .readdirSync("./src/events")
+  .filter((file) => file.endsWith(".js"));
+
+events.forEach((event) => {
+  const eventFile = require(`./src/events/${event}`);
+  if (eventFile.oneTime) {
+    client.once(eventFile.event, (...args) => eventFile.run(...args));
+  } else {
+    client.on(eventFile.event, (...args) => eventFile.run(...args));
+  }
 });
 
-const config = require('./settings/config');
-client.login(process.env.TOKEN);
-
-module.exports = client;
-
-client.slashCommands = new Collection();
-
-client.on("ready", async () => {
-
-    require('./handler')(client);
-
-    const readyEvent = require('./events/client/ready');
-    await readyEvent.execute(client);
-});
-
-process.on("unhandledRejection", (error) => {
-    if (error.code == 10062) return; // Unknown interaction
-
-    console.log(`[ERROR] ${error}`.red);
-})
+client.login(config.bot.token);
