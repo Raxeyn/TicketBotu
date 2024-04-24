@@ -1,42 +1,21 @@
-# 📃 Ticket Bot
+# Discord Tickets Bot
 
+A cool Discord bot to manage tickets on your server 🎫
 
-## ticket discord bot [Features](#-features).
----
-## Need help? join discord server [Invite Link](https://discord.gg/hHweGgGqXa)
+*Project under construction... follow the progress on the [Discord](https://discord.gg/11pm) server.*
 
----
-### Note: Node.js 16.6.0 or newer is required.
----
+*If you don't have any development knowledge, it is recommended to join the Discord support server to get help.*
 
-## Installation
+### 💬 A nice and easy to use system
 
-```sh
-npm install
-```
----
+This is a small project that has been designed to be usable by everyone. That's why it doesn't use any database.
 
-### You need to rename example.env file to `.env` and fill the info.
-### Slash commands not showing in your server? fill `.env` info, and run `slash.js` file.
+Why search complicated when you can just click a button ?
 
-- .env
-```sh
-TOKEN=
-BOTID=
-SERVERID=
-HOST=
-USER=
-DATABASE=
-PORT=3306
-OWNERS=["596227913209217024"]
-```
+![Setup](./img/setup.gif)
 
-### 🥳 Features:
-- Send message to ticket after user left the server.
-- Send message and add user to the ticket after user rejoined the server.
-- Ability to set staff, managers role for ticket channel and changed the embed text, and alot more ...
-- Ability to add / remove user to the ticket with `/add`, `/remove` commands.
-- Ability to close / open ticket with `/close`, `/open` commands.
-- Ability to show all ticket list, and filtered them by `user tickets`, `opened tickets`, `closed tickets`.
-- Ability to rename the ticket with `/rename` command.
-- Ability to use variables in ticket content, use `/variables` to show all available variables.
+Responding to a ticket is easy !
+
+No need to search for hours, use also the buttons.
+
+Realized with ❤️ by [NOobSsam](https://github.com/NOobSsam).
