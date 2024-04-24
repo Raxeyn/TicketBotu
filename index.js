@@ -1,43 +1,24 @@
-const ora = require("ora");
-const config = require("./config");
-const fs = require("fs");
+const app = require("express")();app.get('/', (req, res) =>{res.send("N A S S E R ♕︎");});app.listen(8080);
 
-const { Client, Collection } = require("discord.js");
+app.listen(() => console.log("Server started"));
 
-const intentsLoader = ora("Registering Intents").start();
+app.use('/ping', (req, res) => {
+  res.send(new Date());
+});    
 
-// Checks
-let finalIntents = [];
-if (!Array.isArray(config.bot.intents)) {
-  intentsLoader.warn(
-    "Intents in config file must be in an array, default intents will be used"
-  );
-} else {
-  finalIntents = config.bot.intents;
-  intentsLoader.succeed("Loaded intents successfully from the config file");
-}
 
-const client = new Client({ intents: finalIntents });
 
-module.exports.client = client;
-module.exports.config = config;
-module.exports.db = require("./src/util/functions.js");
 
-// exports
-client.menus = new Collection();
-client.buttons = new Collection();
+const Discord = require("discord.js");
 
-const events = fs
-  .readdirSync("./src/events")
-  .filter((file) => file.endsWith(".js"));
+const db = require("pro.db")
 
-events.forEach((event) => {
-  const eventFile = require(`./src/events/${event}`);
-  if (eventFile.oneTime) {
-    client.once(eventFile.event, (...args) => eventFile.run(...args));
-  } else {
-    client.on(eventFile.event, (...args) => eventFile.run(...args));
-  }
-});
+const { Client, MessageEmbed, MessageButton, MessageActionRow, Collection } = require("discord.js")
 
-client.login(process.env.TOKEN);
+const client = new Client({intents:32767});
+
+require("./handler")(client);
+module.exports = client;
+
+client.slashCommands = new Collection();
+client.login(process.env.token)

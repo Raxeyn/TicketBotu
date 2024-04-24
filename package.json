@@ -1,29 +1,20 @@
 {
-  "name": "slash-handler",
+  "name": "ticket-v13",
   "version": "1.0.0",
-  "description": "Discord.js V13 Slash Commands Handler",
+  "description": "Ticket bot by N A S S E R ♕︎",
   "main": "index.js",
-  "scripts": {
-    "start": "node index.js"
-  },
-"engines": { "node": "16.x" },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "@discordjs/builders": "^0.12.0",
-    "@discordjs/rest": "^0.3.0",
-    "discord-api-types": "^0.29.0",
     "discord.js": "^13.6.0",
-    "dotenv": "^16.0.0",
-    "edit-json-file": "^1.7.0",
-    "is-empty": "^1.2.0",
-    "ora": "^5.4.1"
+    "glob": "^7.2.0",
+    "pro.db": "^3.0.6",
+    "util": "^0.12.4",
+    "express": "^4.17.3",
+    "discord-html-transcripts": "^2.2.8"
   },
-  "devDependencies": {
-    "eslint-plugin-security": "^1.4.0"
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node index.js"
   },
-  "optionalDependencies": {
-    "bufferutil": "^4.0.6"
-  }
+  "author": "N A S S E R ♕︎",
+  "license": "ISC"
 }
