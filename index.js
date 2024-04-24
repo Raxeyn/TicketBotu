@@ -21,7 +21,7 @@ client.on("ready", () => {
     console.log(`${client.user.tag} is now ready to be used!`);
 })
 
-client.login(config.token)
+client.login(process.env.token)
 
 client.on("messageCreate", async (message) => {
     if(!message.guild || message.author.bot) return;
@@ -33,9 +33,9 @@ client.on("messageCreate", async (message) => {
 
     client.settings.ensure(message.guildId, {
         TicketSystem1: {
-            channel: "",
-            message: "",
-            category: "",
+            channel: "1216691216633040956",
+            message: "Deneme Mesajıdır Bu Mesaj Denemedir Deneme Deneme Deneme",
+            category: "1174294310334779432",
         }
     })
 
