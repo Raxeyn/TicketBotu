@@ -1,11 +1,11 @@
 module.exports = {
     botToken: "",
-    clientOwner: [""],
+    clientOwner: ["408496730644938752"],
     prefix: ["."],
 
-    voiceChannel: "",
+    voiceChannel: "1228395713235517560",
 
-    clientPresences: ["Chewy 💙"],
-    clientActivity: "Chewy 💙",
+    clientPresences: ["discord.gg/novaproject"],
+    clientActivity: "discord.gg/novaproject",
     activityType: "STREAMING"
  }
