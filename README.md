@@ -1,19 +1,43 @@
-# Ticket-bot-V13
-Ticket Bot Slashcommands
+<h1 align="center">Welcome to Ducko's DJS Ticket System V14</h1>
+<h3 align="center">System made with 💖 by Ducko#7068</h3>
 
-To convert the project to replit 
-Please read this steps :
+<div align="center">
 
-1- Go to replit then press on `+` / `Create`
-![Create](htps://media.discordapp.net/attachments/941756101311995906/954906200040951849/Screenshot_20220320_035615.jpg)
+[![discord](https://img.shields.io/discord/909261119103832084?style=for-the-badge&color=5865f2&label=Discord)](https://discord.gg/TKz7BMwEap)
+  
+[![issues](https://img.shields.io/github/issues/DuckoDas/DJS-Ticket-System-v14?style=for-the-badge&color=d84559)](https://github.com/DuckoDas/DJS-Ticket-System-v14)
+[![stars](https://img.shields.io/github/stars/DuckoDas/DJS-Ticket-System-v14?color=009F81&label=stars&style=for-the-badge)](https://github.com/DuckoDas/DJS-Ticket-System-v14)
+[![followers](https://img.shields.io/github/followers/DuckoDas?color=009F81&style=for-the-badge)](https://github.com/DuckoDas/)
 
-2- click on `Import from github` 
-![github](https://media.discordapp.net/attachments/884905577581527051/908806819177193514/IMG_20211112_214654.jpg)
+</div>
+<hr>
 
-3- copy repository link and put the link in box
-![link](https://media.discordapp.net/attachments/884905577581527051/908806819495944222/IMG_20211112_214718.jpg)
+## **Features:**
+- Advanced Ticket System with buttons, transcripts and a lot more**
+- Categories is Archived, Closed, and Open**
+- Download to see everything else:)**
 
-4- press `Import from gitub`
-![c](https://media.discordapp.net/attachments/884905577581527051/908806819844096010/IMG_20211112_214906.jpg)
+## **Dependencies:**
+- Make the paths right!
+- [Roald Button Handler](https://github.com/RoaldDahl/Button-Handler)
+- discord.js@14.3.0
+- discord-html-transcripts
+- [MongoDB Database (FREE)](https://www.mongodb.com/)
 
-! N A S S E R ♕︎#4926 ©
+## **Database Connection:**
+```js
+const { MongoDB } = require("MONGODB URL");
+const { connect } = require("mongoose");
+
+module.exports = {
+  name: "ready",
+  async execute(client) {
+    connect(MongoDB).then(() => {
+        console.log(`Mongoose Connected`);
+    });
+  },
+};
+```
+
+## **Credits:**
+- None:/
