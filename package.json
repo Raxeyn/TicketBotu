@@ -1,18 +1,24 @@
 {
-  "name": "cypherbot",
-  "version": "0.0.1",
-  "description": "",
-  "main": "bot.js",
-  "scripts": {
-    "start": "node bot.js"
-  },
-"engines": 
-{ 
-  "node": "16.x" 
-},
-  "author": "Kıvanç",
-  "license": "ISC",
-  "dependencies": {
-    "discord.js": "^12.5.1"
-  }
+    "name": "ticket-system",
+    "version": "1.0.0",
+    "description": "a simple ticket system using button :)",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js"
+    },
+    "keywords": [],
+    "author": "Jhoan#6969",
+    "license": "ISC",
+    "engines": {
+        "node": "16.x"
+    },
+    "dependencies": {
+        "chalk": "^4.1.2",
+        "discord-html-transcripts": "^1.0.0",
+        "discord.js": "^13.6.0",
+        "fs": "^0.0.1-security",
+        "glob": "^7.1.7",
+        "i18n": "^0.14.2",
+        "mongoose": "^6.4.6"
+    }
 }
