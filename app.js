@@ -58,20 +58,7 @@ fs.readdir("./events/", (_err, files) => {
     });
 });
 
-client.on("ready", async () => {
-
-    const rest = new REST({ version: "9" }).setToken(token);
-  try {
-    await rest.put(Routes.applicationCommands(client.user.id), {
-      body: client.commands,
-    });
-  } catch (error) {
-    console.error(error);
-  }
-});
-
-
-client.login(token);
+client.login(process.env.raxeyn);
 
 
 
