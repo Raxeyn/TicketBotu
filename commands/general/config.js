@@ -21,7 +21,7 @@ module.exports = {
 				.addField("Staff Role", "Set the role that can use the bot.")
 				.addField("Staff Mention", "Set the role that can that the bot mentions every time it opens a ticket")
 				.setColor("#2f3136")
-				.setFooter({text: "Ticket System by: Jhoan#6969", iconURL: client.user.displayAvatarURL({dynamic: true})})
+				.setFooter({text: "Ticket System NovaProject", iconURL: client.user.displayAvatarURL({dynamic: true})})
 		], components: [
 			new MessageActionRow()
 				.addComponents(
@@ -63,7 +63,7 @@ module.exports = {
 						.setTitle("Ticket System \🟠")
 						.setDescription("Hey please mention the channel where the transcript will be send.\n**Remimber** If you want to remove the data you have configured, write **remove** and send the message")
 						.setColor("ORANGE")
-						.setFooter({text: "Ticket System by: Jhoan#6969", iconURL: client.user.displayAvatarURL({dynamic: true})})
+						.setFooter({text: "Ticket System NovaProject", iconURL: client.user.displayAvatarURL({dynamic: true})})
 				], components: [
 					new MessageActionRow().addComponents(
 						new MessageButton()
@@ -103,7 +103,7 @@ module.exports = {
 									.setTitle("Ticket System \✅")
 									.setDescription("Hey the channel was setted!")
 									.setColor("GREEN")
-									.setFooter({text: "Ticket System by: Jhoan#6969", iconURL: client.user.displayAvatarURL({dynamic: true})})
+									.setFooter({text: "Ticket System NovaProject", iconURL: client.user.displayAvatarURL({dynamic: true})})
 							], components: []});
 						} catch (error) {
 							interaction.editReply({embeds: [
@@ -111,7 +111,7 @@ module.exports = {
 									.setTitle("Ticket System \❌")
 									.setDescription("Hey there was an error setting the channel!\n" + "```" + error + "```")
 									.setColor("RED")
-									.setFooter({text: "Ticket System by: Jhoan#6969", iconURL: client.user.displayAvatarURL({dynamic: true})})
+									.setFooter({text: "Ticket System NovaProject", iconURL: client.user.displayAvatarURL({dynamic: true})})
 							], components: []});
 						}
 					} else if (message.content === "remove") {
@@ -135,7 +135,7 @@ module.exports = {
 									.setTitle("Ticket System \✅")
 									.setDescription("Hey the channel was removed!")
 									.setColor("GREEN")
-									.setFooter({text: "Ticket System by: Jhoan#6969", iconURL: client.user.displayAvatarURL({dynamic: true})})
+									.setFooter({text: "Ticket System NovaProject", iconURL: client.user.displayAvatarURL({dynamic: true})})
 							], components: []});
 						} catch (error) {
 							interaction.editReply({embeds: [
@@ -143,7 +143,7 @@ module.exports = {
 									.setTitle("Ticket System \❌")
 									.setDescription("Hey there was an error removing the channel!\n" + "```" + error + "```")
 									.setColor("RED")
-									.setFooter({text: "Ticket System by: Jhoan#6969", iconURL: client.user.displayAvatarURL({dynamic: true})})
+									.setFooter({text: "Ticket System NovaProject", iconURL: client.user.displayAvatarURL({dynamic: true})})
 							], components: []});
 						}
 					} else {
@@ -152,7 +152,7 @@ module.exports = {
 								.setTitle("Ticket System \🔴")
 								.setDescription("You need to mention a channel!")
 								.setColor("RED")
-								.setFooter({text: "Ticket System by: Jhoan#6969", iconURL: client.user.displayAvatarURL({dynamic: true})})
+								.setFooter({text: "Ticket System NovaProject", iconURL: client.user.displayAvatarURL({dynamic: true})})
 						], components: []});
 					}
 				});
@@ -162,7 +162,7 @@ module.exports = {
 						.setTitle("Ticket System \🟠")
 						.setDescription("Hey please mention the role that can use the bot.\n**Remimber** If you want to remove the data you have configured, write **remove** and send the message")
 						.setColor("ORANGE")
-						.setFooter({text: "Ticket System by: Jhoan#6969", iconURL: client.user.displayAvatarURL({dynamic: true})})
+						.setFooter({text: "Ticket System NovaProject", iconURL: client.user.displayAvatarURL({dynamic: true})})
 				], components: [
 					new MessageActionRow().addComponents(
 						new MessageButton()
@@ -201,7 +201,7 @@ module.exports = {
 									.setTitle("Ticket System \✅")
 									.setDescription("Hey the staff-role was setted!")
 									.setColor("GREEN")
-									.setFooter({text: "Ticket System by: Jhoan#6969", iconURL: client.user.displayAvatarURL({dynamic: true})})
+									.setFooter({text: "Ticket System NovaProject", iconURL: client.user.displayAvatarURL({dynamic: true})})
 							], components: []});
 						} catch (error) {
 							interaction.editReply({embeds: [
@@ -209,7 +209,7 @@ module.exports = {
 									.setTitle("Ticket System \❌")
 									.setDescription("Hey there was an error setting the role!\n" + "```" + error + "```")
 									.setColor("RED")
-									.setFooter({text: "Ticket System by: Jhoan#6969", iconURL: client.user.displayAvatarURL({dynamic: true})})
+									.setFooter({text: "Ticket System NovaProject", iconURL: client.user.displayAvatarURL({dynamic: true})})
 							], components: []});
 						}
 					} else if (message.content === "remove") {
@@ -232,7 +232,7 @@ module.exports = {
 									.setTitle("Ticket System \✅")
 									.setDescription("Hey the staff-role was removed!")
 									.setColor("GREEN")
-									.setFooter({text: "Ticket System by: Jhoan#6969", iconURL: client.user.displayAvatarURL({dynamic: true})})
+									.setFooter({text: "Ticket System NovaProject", iconURL: client.user.displayAvatarURL({dynamic: true})})
 							], components: []});
 						} catch (error) {
 							interaction.editReply({embeds: [
@@ -240,7 +240,7 @@ module.exports = {
 									.setTitle("Ticket System \❌")
 									.setDescription("Hey there was an error removing the role!\n" + "```" + error + "```")
 									.setColor("RED")
-									.setFooter({text: "Ticket System by: Jhoan#6969", iconURL: client.user.displayAvatarURL({dynamic: true})})
+									.setFooter({text: "Ticket System NovaProject", iconURL: client.user.displayAvatarURL({dynamic: true})})
 							], components: []});
 						}
 					} else {
@@ -250,7 +250,7 @@ module.exports = {
 								.setTitle("Ticket System \🔴")
 								.setDescription("You need to mention a role!")
 								.setColor("RED")
-								.setFooter({text: "Ticket System by: Jhoan#6969", iconURL: client.user.displayAvatarURL({dynamic: true})})
+								.setFooter({text: "Ticket System NovaProject", iconURL: client.user.displayAvatarURL({dynamic: true})})
 						], components: []});
 					}
 				});
@@ -260,7 +260,7 @@ module.exports = {
 						.setTitle("Ticket System \🟠")
 						.setDescription("Hey please mention the user that can use the bot.\n**Remimber** If you want to remove the data you have configured, write **remove** and send the message")
 						.setColor("ORANGE")
-						.setFooter({text: "Ticket System by: Jhoan#6969", iconURL: client.user.displayAvatarURL({dynamic: true})})
+						.setFooter({text: "Ticket System NovaProject", iconURL: client.user.displayAvatarURL({dynamic: true})})
 				], components: [
 					new MessageActionRow().addComponents(
 						new MessageButton()
@@ -299,7 +299,7 @@ module.exports = {
 									.setTitle("Ticket System \✅")
 									.setDescription("Hey the staff-mention role was setted!")
 									.setColor("GREEN")
-									.setFooter({text: "Ticket System by: Jhoan#6969", iconURL: client.user.displayAvatarURL({dynamic: true})})
+									.setFooter({text: "Ticket System NovaProject", iconURL: client.user.displayAvatarURL({dynamic: true})})
 							], components: []});
 						} catch (error) {
 							interaction.editReply({embeds: [
@@ -307,7 +307,7 @@ module.exports = {
 									.setTitle("Ticket System \❌")
 									.setDescription("Hey there was an error setting the staff-mention role!\n" + "```" + error + "```")
 									.setColor("RED")
-									.setFooter({text: "Ticket System by: Jhoan#6969", iconURL: client.user.displayAvatarURL({dynamic: true})})
+									.setFooter({text: "Ticket System NovaProject", iconURL: client.user.displayAvatarURL({dynamic: true})})
 							], components: []});
 						}
 					} else if (message.content === "remove") {
@@ -330,7 +330,7 @@ module.exports = {
 									.setTitle("Ticket System \✅")
 									.setDescription("Hey the staff-mention was removed!")
 									.setColor("GREEN")
-									.setFooter({text: "Ticket System by: Jhoan#6969", iconURL: client.user.displayAvatarURL({dynamic: true})})
+									.setFooter({text: "Ticket System NovaProject", iconURL: client.user.displayAvatarURL({dynamic: true})})
 							], components: []});
 						} catch (error) {
 							interaction.editReply({embeds: [
@@ -338,7 +338,7 @@ module.exports = {
 									.setTitle("Ticket System \❌")
 									.setDescription("Hey there was an error removing the staff-mention role!\n" + "```" + error + "```")
 									.setColor("RED")
-									.setFooter({text: "Ticket System by: Jhoan#6969", iconURL: client.user.displayAvatarURL({dynamic: true})})
+									.setFooter({text: "Ticket System NovaProject", iconURL: client.user.displayAvatarURL({dynamic: true})})
 							], components: []});
 						}
 					} else {
@@ -348,7 +348,7 @@ module.exports = {
 								.setTitle("Ticket System \🔴")
 								.setDescription("You need to mention a role!")
 								.setColor("RED")
-								.setFooter({text: "Ticket System by: Jhoan#6969", iconURL: client.user.displayAvatarURL({dynamic: true})})
+								.setFooter({text: "Ticket System NovaProject", iconURL: client.user.displayAvatarURL({dynamic: true})})
 						], components: []});
 					}
 				});
@@ -359,7 +359,7 @@ module.exports = {
 						.setTitle("Ticket System \🔴")
 						.setDescription("You have canceled the process!")
 						.setColor("RED")
-						.setFooter({text: "Ticket System by: Jhoan#6969", iconURL: client.user.displayAvatarURL({dynamic: true})})
+						.setFooter({text: "Ticket System NovaProject", iconURL: client.user.displayAvatarURL({dynamic: true})})
 				], components: []});
 			} else if (button === "show") {
 				collector.stop();
@@ -372,7 +372,7 @@ module.exports = {
 							.setTitle("Ticket System \🔴")
 							.setDescription("This server doesn't have configurated the ticket system!")
 							.setColor("RED")
-							.setFooter({text: "Ticket System by: Jhoan#6969", iconURL: client.user.displayAvatarURL({dynamic: true})})
+							.setFooter({text: "Ticket System NovaProject", iconURL: client.user.displayAvatarURL({dynamic: true})})
 					], components: []});
 				}
 				const data = {
@@ -385,7 +385,7 @@ module.exports = {
 						.setColor("GREEN")
 						.setTitle("Ticket System \✅")
 						.setDescription("Here is the current configurated data:")
-						.setFooter({text: "Ticket System by: Jhoan#6969", iconURL: client.user.displayAvatarURL({dynamic: true})})
+						.setFooter({text: "Ticket System NovaProject", iconURL: client.user.displayAvatarURL({dynamic: true})})
 						.addFields([
 							{
 								name: "Transcript Channel 📚",
