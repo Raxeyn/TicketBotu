@@ -21,9 +21,9 @@
 					"send_success": "The ticket panel was successfully sent!",
 					"embed_config": {
 						"separator": "{counter}: {name} - {emoji}",
-						"title": "Support System | Create Ticket",
-						"description": "By clicking one of the corresponding button categories on this message, you will create a ticket with direct and private access to the staff.\n\n__**Support Categories**__\n{separator}\n\n__**Ticket Information**__\n`•` Before creating a ticket read the proper **FAQ** Channels.\n`•` Abuse of the ticket system will lead to **punishment(s)**",
-						"footer": "Please use the buttons below to create a ticket.",
+						"title": "NovaProject| Ticket Sistemi",
+						"description": "Bu mesajdaki ilgili düğme kategorilerinden birine tıklayarak personele doğrudan ve özel erişime sahip bir destek bildirimi oluşturacaksınız.\n\n__**Destek Kategorileri**__\n{separator}\n\n__**Bilet Bilgileri**__\n`•` Bilet oluşturmadan önce uygun **<#1228395713562546262>** Kanallarını okuyun..\n`•` Bilet sisteminin kötüye kullanılması **ceza(lar)** ile sonuçlanacaktır**",
+						"footer": "Bilet oluşturmak için lütfen aşağıdaki butonları kullanın.",
 						"color": "AQUA"
 					}
 				}
@@ -47,8 +47,8 @@
 			"success": "{user_mention} has renamed the ticket to {new_name}."
 		},
 		"alert": {
-			"user_message": "Hello {user_mention} you have an open [ticket]({link}) and a staff member needs you to respond to it immediately\n\n**Ticket Information**\n » Ticket Name: {channel_name}\n » Ticket Since: {openSince}\n » Ticket Link: {direct_link}",
-			"staff_message": "I just sent a message to the user, please wait for him to reply"
+			"user_message": "Merhabalar {user_mention} açık bir [bilet]({link})'iniz var ve bir personelimizin buna hemen yanıt vermesini istiyor\n\n**Bilet Bilgileri**\n » Bilet Adı: {channel_name}\n » Bilet Başlangıç ​​tarihi: {openSince}\n » Bilet Bağlantısı: {direct_link}",
+			"staff_message": "Kullanıcıya az önce bir mesaj gönderdim, lütfen yanıt vermesini bekleyin"
 		},
 		"claim": {
 			"already_claimed": "This ticket is already claimed by {user_mention}.",
@@ -65,7 +65,7 @@
 			"creating": "Creating ticket...",
 			"created": "Ticket created successfully {channel_mention}!",
 			"title": "Ticket Created | {panel_name} #{ticket_number}",
-			"description": "Hello {member_username}, our staff will answer you as quickly as possible.\nIn the meantime, please describe your problem here in as much detail as possible.\n\n**Ticket Panel:** {panel_name}\n**Ticket Owner:** {member_mention}\n**Ticket Date:** {ticket_date}",
+			"description": "Merhabalar {member_username}, personelimiz size mümkün olan en kısa sürede cevap verecektir.\nBu arada lütfen sorununuzu mümkün olduğunca ayrıntılı olarak burada açıklayın.\n\n**Ticket Panel:** {panel_name}\n**Ticket Owner:** {member_mention}\n**Ticket Date:** {ticket_date}",
 			"color": "AQUA"
 		}
 	},
