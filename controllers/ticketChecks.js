@@ -48,7 +48,7 @@ async function havePerms(interaction) {
 			new MessageEmbed()
 				.setTitle("Ticket System \❌")
 				.setDescription(interaction.client.languages.__("errors.server_without_tickets"))
-				.setFooter({text: "Ticket System by: Jhoan#6969", iconURL: interaction.client.user.displayAvatarURL()})
+				.setFooter({text: "Ticket System NovaProject", iconURL: interaction.client.user.displayAvatarURL()})
 				.setColor("RED")
 		]});
 		return false;
@@ -58,7 +58,7 @@ async function havePerms(interaction) {
 			new MessageEmbed()
 				.setTitle("Ticket System \❌")
 				.setDescription(interaction.client.languages.__("errors.no_staff_role"))
-				.setFooter({text: "Ticket System by: Jhoan#6969", iconURL: interaction.client.user.displayAvatarURL()})
+				.setFooter({text: "Ticket System NovaProject", iconURL: interaction.client.user.displayAvatarURL()})
 				.setColor("RED")
 		]});
 		return false;
@@ -69,7 +69,7 @@ async function havePerms(interaction) {
 			new MessageEmbed()
 				.setTitle("Ticket System \❌")
 				.setDescription(interaction.client.languages.__("errors.no_permission"))
-				.setFooter({text: "Ticket System by: Jhoan#6969", iconURL: interaction.client.user.displayAvatarURL()})
+				.setFooter({text: "Ticket System NovaProject", iconURL: interaction.client.user.displayAvatarURL()})
 				.setColor("RED")
 		]});
 		return false;
