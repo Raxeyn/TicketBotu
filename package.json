@@ -4,11 +4,15 @@
   "description": "",
   "main": "bot.js",
   "scripts": {
-    "test": "node bot.js"
+    "start": "node bot.js"
   },
+"engines": 
+{ 
+  "node": "16.x" 
+},
   "author": "Kıvanç",
   "license": "ISC",
   "dependencies": {
-    "discord.js": "^11.4.2"
+    "discord.js": "^12.5.1"
   }
 }

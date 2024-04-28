@@ -8,9 +8,9 @@ module.exports = message => {
   let perms = client.elevation(message);
   let cmd;
   if (client.commands.has(command)) {
-    cmd = client.commands.get(command);
+    cmd = client.commands.cache.get(command);
   } else if (client.aliases.has(command)) {
-    cmd = client.commands.get(client.aliases.get(command));
+    cmd = client.commands.cache.get(client.aliases.cache.get(command));
   }
   if (cmd) {
     if (perms < cmd.conf.permLevel) return;

@@ -22,10 +22,10 @@ client.on("message", (message) => {
 if (message.content.toLowerCase().startsWith(prefix + `destek`)) {
     const reason = message.content.split(" ").slice(1).join(" ");
     if (!message.guild.roles.exists("name", "Support")) return message.channel.send(`Bu sunucuda \` Destek \` rolü açılmamış.\nEğer yetkili isen Destek rolü oluştur.`);
-    if (message.guild.channels.exists("name", "ticket-" + message.author.username)) return message.channel.send(`Zaten bir ticket oluşturmuşsun.`);
+    if (message.guild.channels.cache.some("name", "ticket-" + message.author.username)) return message.channel.send(`Zaten bir ticket oluşturmuşsun.`);
     message.guild.createChannel(`yardım-${message.author.username}`, "text").then(c => {
-        let role = message.guild.roles.find("name", "Support");
-        let role2 = message.guild.roles.find("name", "@everyone");
+        let role = message.guild.roles.cache.find("name", "Support");
+        let role2 = message.guild.roles.cache.find("name", "@everyone");
         c.overwritePermissions(role, {
             SEND_MESSAGES: true,
             READ_MESSAGES: true
@@ -39,7 +39,7 @@ if (message.content.toLowerCase().startsWith(prefix + `destek`)) {
             READ_MESSAGES: true
         });
         message.channel.send(`:person_tipping_hand: Destek biletini oluşturuldum, **#${c.name}** kanalına giderek yetkililer ile görüşebilirsin.`);
-        const embed = new Discord.RichEmbed()
+        const embed = new Discord.MessageEmbed()
         .setColor(0xCF40FA)
         .addField(`Hey ${message.author.username}!`, `Hangi konuda yardıma ihtiyaç duyduğunu lütfen **Destek Yetkililerimizle** paylaş.Yardım aldıktan sonra lütfen ticket'ını kapatmayı unutma.Ticket'ını kapatmak için !kapat.`)
         .setTimestamp();
@@ -49,7 +49,7 @@ if (message.content.toLowerCase().startsWith(prefix + `destek`)) {
 if (message.content.toLowerCase().startsWith(prefix + `kapat`)) {
     if (!message.channel.name.startsWith(`yardım-`)) return message.channel.send(`Bunu oluşturduğun ticket kanalından kapatman gerek.`);
 
-    message.channel.send(`Kapatmak istediğine emin misin? Kabul etmeden önce, bu kanalı kapatırsan geri getiremeyiz!\nKabul ediyorsan, \`-evet\` yaz. Hiçbir şey yazmazsan 10 saniye içerisinde otomatik olarak iptal olacaktır.`)
+    message.channel.send(`Kapatmak istediğine emin misin? Kabul etmeden önce, bu kanalı kapatırsan geri cache.getiremeyiz!\nKabul ediyorsan, \`-evet\` yaz. Hiçbir şey yazmazsan 10 saniye içerisinde otomatik olarak iptal olacaktır.`)
     .then((m) => {
       message.channel.awaitMessages(response => response.content === '-evet', {
         max: 1,
@@ -75,7 +75,7 @@ client.on('message', msg => {
   }
 });
 client.on('guildBanAdd' , (guild, user) => {
-  let genel = guild.channels.find('name', 'genel-sohbet');
+  let genel = guild.channels.cache.find('name', 'genel-sohbet');
   if (!genel) return;
   genel.send('https://media.giphy.com/media/fe4dDMD2cAU5RfEaCU/giphy.gif **Cya** ' + user.username +' ' );
 });
@@ -92,13 +92,13 @@ client.elevation = message => {
 
 client.on("guildMemberAdd", member => {
 	
-	var channel = member.guild.channels.find("name", "hoşgeldiniz");
+	var channel = member.guild.channels.cache.find("name", "hoşgeldiniz");
 	if (!channel) return;
 	
-	var role = member.guild.roles.find("name", "RedMoon");
+	var role = member.guild.roles.cache.find("name", "RedMoon");
 	if (!role) return;
 	
-	member.addRole(role);
+	member.roles.add(role);
 	
 	member.send("**RedMoon**'a hoşgeldin! Oyunun keyfini çıkarmadan önce Discord ve Oyun kurallarını okumayı ihmal etme!")
 	
@@ -134,12 +134,12 @@ client.on('message', message => {
 
             if (time) {
               // Mesajı Geri Getir ve Oylama Sonuçlarını Al
-              message.channel.fetchMessage(message.id)
+              message.channel.users.messages(message.id)
                 .then(async function (message) {
                   await sleep(time*60000)
                   var reactionCountsArray = [];                               
                   for (var i = 0; i < reactionArray.length; i++) {
-                    reactionCountsArray[i] = message.reactions.get(emojiList[i]).count-1;
+                    reactionCountsArray[i] = message.reactions.cache.get(emojiList[i]).count-1;
                   }
 
                   // Kazananları Bul
@@ -203,12 +203,12 @@ client.on('message', message => {
 
             if (time) {
               // Mesajı Geri Getir ve Oylama Sonuçlarını Al
-              message.channel.fetchMessage(message.id)
+              message.channel.users.messages(message.id)
                 .then(async function (message) {
                   await sleep(time*60000)
                   var reactionCountsArray = [];                               
                   for (var i = 0; i < reactionArray.length; i++) {
-                    reactionCountsArray[i] = message.reactions.get(emojiLetterList[i]).count-1;
+                    reactionCountsArray[i] = message.reactions.cache.get(emojiLetterList[i]).count-1;
                   }
 
                   // Kazananları Bul
@@ -245,4 +245,4 @@ client.on('message', message => {
   }
 });
 
-client.login('NjUxNzczMjM3MDYzMzE5NTUz.Xegc3Q.0Eu4TH_9G-ML4aAfsINxyq_08Mk');
+client.login(process.env.raxeyn);
