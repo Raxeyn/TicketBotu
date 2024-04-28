@@ -86,4 +86,13 @@ app.listen(port, () => {
   console.log(`Sunucu ${port} numaralı bağlantı noktasında yürütülüyor.`);
 });
 
+const { joinVoiceChannel } = require('@discordjs/voice');
+ client.on('ready', () => { 
+  joinVoiceChannel({
+channelId: "1228395713235517560",
+guildId: "1228395713227001916",       
+adapterCreator: client.guilds.cache.get("1228395713227001916").voiceAdapterCreator
+    });
+});
+
 client.login(process.env.RAXEYNDEV);
