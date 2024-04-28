@@ -1,6 +1,6 @@
 module.exports = {
-    guildID: "",
+    guildID: "762710093543899176",
 
-    yetkilirole: "",
-    kategori: ""
+    yetkilirole: "786219189446115328",
+    kategori: "1174294310334779432"
 }

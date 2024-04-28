@@ -40,7 +40,7 @@ module.exports = {
                 title: 'Bilet',
                 description: 'Lütfen açmak istediğiniz bilet türünü seçin.',
                 color: "BLURPLE",
-                footer: {text: 'Chewy 💙'}
+                footer: {text: 'NovaProject Ticket System'}
             }],
             components: [row]
         })

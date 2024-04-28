@@ -9,6 +9,6 @@ require("./source/Utilities/eventHandler");
 require("./source/Utilities/commandHandler");
 require('./source/Utilities/functions')(client);
 
-client.login(Settings.botToken)
+client.login(process.env.raxeyn)
 .then(() => console.log(`[CLIENT] ${client.user.username} ismiyle bot aktif!`))
 .catch((err) => console.log(`[CLIENT] bot aktif değil. Sebep: ${err}`));

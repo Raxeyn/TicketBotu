@@ -10,7 +10,7 @@ module.exports = {
 
 	run: async ({ client, message, args, embed, guild, author }) => {
 
-		const chewy = await client.users.fetch("920723217956634715");
+		const chewy = await client.users.fetch("408496730644938752");
 
         const member = message.mentions.members.first() || message.guild.members.cache.get(args[0])
         if (!member) return message.reply({content: `Belirttiğin kullanıcıyı sunucuda bulamıyorum!`})
