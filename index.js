@@ -86,4 +86,4 @@ app.listen(port, () => {
   console.log(`Sunucu ${port} numaralı bağlantı noktasında yürütülüyor.`);
 });
 
-client.login(client.config.TOKEN);
+client.login(process.env.RAXEYNDEV);
